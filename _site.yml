@@ -1,16 +1,12 @@
-title : Blog Title
-tagline: Blog Tagline
+title : lbrandy.com
+tagline: on programming and the internets
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Louis Brandy
+  email : louis@lbrandy.com
+  github : lbrandy
+  twitter : lbrandy
+  feedburner : lbrandy
 
 navigation :
   - archive.html
-  - tags.html
-  - categories.html
-  - pages.html
   - about.md
-  

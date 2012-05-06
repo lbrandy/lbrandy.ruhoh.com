@@ -2,14 +2,14 @@
 RuhohSpec: '0.1'
 
 theme : twitter
-permalink: /:categories/:title
+permalink: /blog/:year/:month/:filename
 
-production_url : http://sample.com
+production_url : http://lbrandy.com/blog
 
 comments :
   provider : disqus
   disqus :
-    short_name : jekyllbootstrap
+    short_name : lbrandy
   livefyre :
     site_id : 123
   intensedebate :
@@ -21,14 +21,14 @@ comments :
     colorscheme: light
 
 analytics :
-  provider : false # change tracking id then enable here
+  provider : true # change tracking id then enable here
   google : 
-      tracking_id : 'UA-123-12'
+      tracking_id : 'UA-4513764-3'
   getclicky :
     site_id : 
 
 syntax :
   provider : google_prettify
   google_prettify : 
-      theme: twitter-bootstrap
+      theme: sons-of-obsidian
       linenums : true
