@@ -10,7 +10,7 @@ layout: post
 ---
 In <a href="http://xkcd.com">xkcd</a> style...
 
-<a href="http://lbrandy.com/blog/wp-content/uploads/2008/10/jpg_vs_png2.png"><img class="size-full wp-image-173" title="this isn't xkcd. don't look for alt text." src="http://lbrandy.com/blog/wp-content/uploads/2008/10/jpg_vs_png2.png" alt="PNG vs JPEG" width="420" height="450" /></a>
+<img src="{{paths.media}}/jpg_vs_png2.png" title="this isn't xkcd. don't look for alt test.">
 
 JPEG isn't always right. If you are one of those people who just assumes JPEGs rule the world and make all images JPEG, please stop.  There is a time and a place where you have to put the JPEG encoder down. It's not a silver bullet.
 

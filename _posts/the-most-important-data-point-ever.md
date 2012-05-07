@@ -12,7 +12,7 @@ I am not the first nor will I be the last to report to you perhaps the greatest 
 
 Let's cut to the chase. The most important data point, ever:
 
-<a href="http://lbrandy.com/blog/wp-content/uploads/2009/02/fsm.png"><img class="alignnone size-medium wp-image-571" title="fsm" src="http://lbrandy.com/blog/wp-content/uploads/2009/02/fsm-300x229.png" alt="" width="300" height="229" /></a>
+![fsm]({{paths.media}}/fsm.png)
 
 First, <a href="http://en.wikipedia.org/wiki/Germ_theory_of_disease">Louis Pasteur boiled some liquid</a>, and inside nothing grew. The consequences of this incredibly simple act are tremendous. There are living things too small to see. They cause diseases. It is not caused by vengeful gods, witches, or spontaneous generation. There is no more need for witch hunts, human, or animal sacirifice to ward off disease. Some, at the time, understood the implications of the simple experiment, others had to be led there. Some of you realize what the above data point means, for the rest, carry on.
 
