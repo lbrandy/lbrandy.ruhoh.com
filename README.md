@@ -1,38 +1,11 @@
-A default blog scaffold for **ruhoh** compatible static blog parsers.
+My blog, built with <http://ruhoh.com/usage>.
 
-See <http://ruhoh.com> for more information.
-
-## Usage and Documentation
-
-See <http://ruhoh.com/usage> for full usage and documentation.
-
-Currently the only parser is available in ruby as a ruby gem:
-
-````bash
-$ gem install ruhoh
-$ ruhoh help
-````
-
-Once you have the gem you can run your blog locally:
-
-Assume USERNAME is your GitHub username.
-
-````bash
-$ git clone git://github.com/ruhoh/blog.git USERNAME.ruhoh.com
-$ cd USERNAME.ruhoh.com
-$ rackup -p 9292
-````
-
-Using your GitHub username is useful for automatically publishing to ruhoh.com
-
-For all publishing options including self-hosting see: <http://ruhoh.com/usage/publish>
+Convert from wordpress with a janky script (see conversion directory).
 
 ## License
 
-Released under the [MIT License](http://www.opensource.org/licenses/MIT)
+The code is all part of ruhoh and licensed as ruhoh is licensed.
 
-=======
-lbrandy.ruhoh.com
-=================
+I have no figured out the proper license on my writing yet (prob some variant of creative commons), please let me know if you plan on using it and this message is still here.
 
-blog
+
