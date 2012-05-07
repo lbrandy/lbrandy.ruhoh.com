@@ -25,15 +25,15 @@ So, 52 weeks later, I must say that this little experiment has been an unmitigat
 
 So here's to another 52 posts.
 <h3>Some statistics</h3>
-<strong>635,491 </strong>page views
+**635,491 **page views
 
-<strong>579,655</strong> uniques
+**579,655** uniques
 
-<strong>700+</strong> RSS subscribers
+**700+** RSS subscribers
 
 I've had a visitor from virtually every country in the world (missing a few African countries, North Korea, Turkmenistan and Serbia). If this was Risk, I'd be collecting armies for North America, South America, and Australia. And if Serbia would get their act together, I could collect Europe too.
 
-<strong>Most visited posts:</strong>
+**Most visited posts:**
 <ol>
 	<li>284,050 - <a href="http://lbrandy.com/blog/2008/10/my-first-and-last-webcomic/">My first and last web comic (JPG v PNG)</a></li>
 	<li>57,417 - <a href="http://lbrandy.com/blog/2009/08/an-almost-perfect-hack/">An almost perfect hack</a></li>
@@ -42,7 +42,7 @@ I've had a visitor from virtually every country in the world (missing a few Afri
 	<li>23,311 - <a href="http://lbrandy.com/blog/2009/03/more-cache-craziness/">More cache craziness</a></li>
 	<li> 21,984 - <a href="http://lbrandy.com/blog/2008/10/algorithms-in-real-life/">Algorithms in real life</a></li>
 </ol>
-<strong>Best traffic sources:</strong>
+**Best traffic sources:**
 <ol>
 	<li>202,337 - reddit.com</li>
 	<li>118,441 - digg.com</li>

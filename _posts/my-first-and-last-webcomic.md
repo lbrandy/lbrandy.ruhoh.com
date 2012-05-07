@@ -8,7 +8,7 @@ tags: []
 layout: post
 
 ---
-<a href="http://xkcd.com">xkcd</a> style...
+In <a href="http://xkcd.com">xkcd</a> style...
 
 <a href="http://lbrandy.com/blog/wp-content/uploads/2008/10/jpg_vs_png2.png"><img class="size-full wp-image-173" title="this isn't xkcd. don't look for alt text." src="http://lbrandy.com/blog/wp-content/uploads/2008/10/jpg_vs_png2.png" alt="PNG vs JPEG" width="420" height="450" /></a>
 

@@ -14,7 +14,9 @@ But I also had to give a test. Ok, then. I sat down and made up a test. I had no
 
 I was able to find the old course website. I've chosen some of the more entertaining questions so you can try it yourself...
 <h3>Question #1 -- Syntax</h3>
-<pre>1. Which of the following will give a syntax/parse error? (circle all that apply)
+
+<pre>
+1. Which of the following will give a syntax/parse error? (circle all that apply)
 (note, x is an integer)
 *5 points*
 
@@ -22,20 +24,28 @@ I was able to find the old course website. I've chosen some of the more entertai
 1b) y = x+++3;
 1c) cout &gt;&gt; "Hello";
 1d) if (x+3) x=x+3;
-1e) x = (x++ == 3 + x % (x=x=3));</pre>
+1e) x = (x++ == 3 + x % (x=x=3));
+</pre>
+
 Not on the original test, but for bonus points, if x is 1 before 1e, what is x after that line?
 <h3>Question #2 -- Evaluating Expressions</h3>
-<pre>2. What is the value of each of the following...
+
+<pre>
+2. What is the value of each of the following...
 *5 points*
 
    2a.	11 % 3		_____
    2b.	2 - 6 * 2	_____
    2c.	3 / 1 + 1	_____
    2d.	5//3		_____
-   2e.	(34 &gt; 19)	_____</pre>
+   2e.	(34 &gt; 19)	_____
+</pre>
+
 This should be straightforward. Except for 2d. That is just plain mean.
 <h3>Question #5 -- Why? Seriously, why?</h3>
-<pre>5. What is the output of the following code?
+
+<pre>
+5. What is the output of the following code?
 *2 points*
 
 int x = 0;
@@ -54,10 +64,14 @@ if (x != z)
      cout &lt;&lt; "This is not the answer.";
   }
 
-Output: ___________________________________________</pre>
+Output: ___________________________________________
+</pre>
+
 This problem screams "trick-question" but to no avail. Every single one of them got this wrong. Every. Single. One. That is quite frankly amazing considering it's essentially a 50-50 guess and I had about 30 students. I'll go ahead and put this challenge out. Try to come up with a 50-50 question that every single student in your class gets wrong.
 <h3>Bonus Question #1 -- Words do not describe...</h3>
-<pre>B1) What is the _EXACT_ output of the following code:
+
+<pre>
+B1) What is the _EXACT_ output of the following code:
 *2 points*
 
 void main(int)
@@ -73,5 +87,7 @@ while (counter1++ != 10)
 cout &lt;&lt; 'j' &lt;&lt; 'k';
 }
 
-Output: ______________</pre>
-I am a horrible person.
+Output: ______________
+</pre>
+
+I failed.

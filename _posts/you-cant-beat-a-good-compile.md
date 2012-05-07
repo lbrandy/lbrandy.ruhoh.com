@@ -37,13 +37,12 @@ void naive(float* in, float* out)
       out[i] += filter[j] * in[i+j];
   }
 }
-
-
 </pre>
 
 This is an interesting example because it contains a fatal flaw that might not be obvious. Take a second to understand what this code is doing. It's fairly simple, but critical to the rest of the discussion. Let's look at the assembly output of this, built  using -O3.
+
 <pre>
-08048430 <naive>:
+08048430 naive:
  8048430:       55                      push   %ebp
  8048431:       31 c0                   xor    %eax,%eax
  8048433:       89 e5                   mov    %esp,%ebp
@@ -79,16 +78,17 @@ This is an interesting example because it contains a fatal flaw that might not b
  804848c:       d9 1c 82                fstps  (%edx,%eax,4)
  804848f:       83 c0 01                add    $0x1,%eax
  8048492:       3d 84 13 00 00          cmp    $0x1384,%eax
- 8048497:       75 a7                   jne    8048440 <naive+0x10>
+ 8048497:       75 a7                   jne    8048440 naive+0x10
  8048499:       5d                      pop    %ebp
  804849a:       c3                      ret    
  804849b:       90                      nop    
  804849c:       8d 74 26 00             lea    0x0(%esi),%esi
-
 </pre>
+
 From the assembly, we see that the compiler has done quite a bit (if you don't know assembly, don't worry, I'll do my best to explain). First we see all of the address calculation involved in loading the filter coefficients has vanished (it is loading each one directly, e.g. <code>flds 0x8048918</code>). Second, notice that the (fixed sized) inner loop has been completely unrolled, resulting in each of the 5 multiplications and additions per iteration. So far so good.
 
 There is, however, a very alarming surprise is this code. That is the quantity of store instructions (also loads). After every iteration of our inner loop (each filter coefficient), the result is stored. You can see 5 different store instructions (<code>fstps</code>, <code>fsts</code>) per iteration of this loop. Why? Let's have a look at the code again:
+
 <pre>
 void naive(float* in, float* out)
 {
@@ -100,16 +100,16 @@ void naive(float* in, float* out)
       out[i] += filter[j] * in[i+j];
   }
 }
-
-
 </pre>
+
 To the inexperienced, it might be bewildering why the optimizing compiler would generate 5 store instructions for <code>out[i]=</code> in the inner loop. Why wouldn't it just accumulate the answer in a register, and then store only the final result? The answer is: aliasing. The problem here is that compiler cannot assume that the pointers <code>*in</code> and <code>*out</code> are disjoint. It must store the result into <code>out[i]</code> each iteration because <code>out[i]</code> may be <code>in[i+j]</code> in the next iteration of the inner loop. With a bit of thought, it becomes clear how this code requires these stores to be correct in cases like <code>*out</code> pointing one float ahead of <code>*in</code>.
 
 Another hard-learned tidbit: wasteful store instructions are terrible because stores can be incredibly expensive (far worse than an extra add or multiply).
 
 <h3>Fixing it with restricted pointers</h3>
 
-There are several ways to fix this problem, but in the spirit of teaching the art of optimization, I'll go with the use of the <code>__restrict__</code> qualifier (this is a gcc directive, but most compilers have some support for restricted pointers). [<a href="http://lbrandy.com/blog/2010/06/you-cant-beat-a-good-compile/#comment-26448">note from comments</a>: restricted pointers are part of the C99 standard now using the keyword <code>restrict</code>. ]. The only change I made is to add <code>__restrict__</code> to the function declaration: 
+There are several ways to fix this problem, but in the spirit of teaching the art of optimization, I'll go with the use of the <code>__restrict__</code> qualifier (this is a gcc directive, but most compilers have some support for restricted pointers). The only change I made is to add <code>__restrict__</code> to the function declaration: 
+
 <pre>
 void naive_restrict(float *__restrict__ in, float *__restrict__ out)
 {
@@ -122,9 +122,11 @@ void naive_restrict(float *__restrict__ in, float *__restrict__ out)
   }
 }
 </pre>
+
 This directive tells the compiler that you, the programmer, promise that <code>*in</code> and <code>*out</code> are disjoint, and no aliasing will occur. If you break your promise, don't expect your code to be correct. Here is the assembly of that output:
+
 <pre>
-080484a0 <naive_restrict>:
+080484a0 naive_restrict:
  80484a0:       55                      push   %ebp
  80484a1:       31 c0                   xor    %eax,%eax
  80484a3:       89 e5                   mov    %esp,%ebp
@@ -151,12 +153,13 @@ This directive tells the compiler that you, the programmer, promise that <code>*
  80484e9:       d9 1c 81                fstps  (%ecx,%eax,4)
  80484ec:       83 c0 01                add    $0x1,%eax
  80484ef:       3d 84 13 00 00          cmp    $0x1384,%eax
- 80484f4:       75 ba                   jne    80484b0 <naive_restrict+0x10>
+ 80484f4:       75 ba                   jne    80484b0 naive_restrict+0x10
  80484f6:       5d                      pop    %ebp
  80484f7:       c3                      ret    
  80484f8:       90                      nop    
  80484f9:       8d b4 26 00 00 00 00    lea    0x0(%esi),%esi
 </pre>
+
 Now, you do not have to be an assembly expert to see how much more streamlined this code is. It consists almost exclusively of loads, multiplies, and adds with a final store at the end. This does exactly what we'd originally hoped. It realizes it can keep a temporary running sum and only store once at the end. We should also note that if you violate the restricted pointer promise, this code will not be correct!
 
 It shouldn't surprise you to see how much faster this version is, either:

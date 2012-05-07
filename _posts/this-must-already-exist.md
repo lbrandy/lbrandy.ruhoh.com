@@ -47,18 +47,26 @@ convert 94.jpg -resize 320x240 94-sm.jpg
 $ !! | sh</pre>
 Quick word about what this does: The first command creates the commands and just prints them out. The second line pipes the output (!! means repeat the previous command) into sh. In other words, it executes the previous output as commands.
 
-The problem with this solution is that it is single-threaded. [update: as I write this, I realize a second problem and yet another 'this must already exist moment'. Using awk in this manner is something I tend to do constantly and it seems a bit awkward. Maybe there is a cleaner way to do this?]. On most of our machines we have 4 cores, and it would be really nice to have something like this finish 4x as quickly by using all of the cores on my machine. What I want to do is this:
-<pre>$ls *.jpg | awk -F. '{printf "convert %s.jpg -resize 320x240 %s-sm.jpg\n",$1,$1}' 
+The problem with this solution is that it is single-threaded. (update: as I write this, I realize a second problem and yet another 'this must already exist moment'. Using awk in this manner is something I tend to do constantly and it seems a bit awkward. Maybe there is a cleaner way to do this?). On most of our machines we have 4 cores, and it would be really nice to have something like this finish 4x as quickly by using all of the cores on my machine. What I want to do is this:
+
+<pre>
+$ls *.jpg | awk -F. '{printf "convert %s.jpg -resize 320x240 %s-sm.jpg\n",$1,$1}' 
 convert 92.jpg -resize 320x240 92-sm.jpg
 convert 93.jpg -resize 320x240 93-sm.jpg
 convert 94.jpg -resize 320x240 94-sm.jpg
 ...
-$ !! | gogo -t4 </pre>
+$ !! | gogo -t4 
+</pre>
+
 The mythical 'gogo' program would take a list of commands on std-in and do them N at a time (4, in this case). It is apparently <a href="http://www.spinellis.gr/blog/20090304/">a well-kept secret that (gnu's) xargs</a> is capable of this:
-<pre>$ls *.jpg | awk -F. '{printf "%s.jpg -resize 320x240 %s-sm.jpg\n",$1,$1}'
+
+<pre>
+$ls *.jpg | awk -F. '{printf "%s.jpg -resize 320x240 %s-sm.jpg\n",$1,$1}'
 92.jpg -resize 320x240 92-sm.jpg
 93.jpg -resize 320x240 93-sm.jpg
 94.jpg -resize 320x240 94-sm.jpg
 ...
-$ !! | xargs -0 -n 1 -P 4 convert</pre>
+$ !! | xargs -0 -n 1 -P 4 convert
+</pre>
+
 You'll notice you have to move the command (convert) to the xargs command, and then remember all of the parameters (-0, -n, -P). I find the above command to be extremely awkward to use, in practice, and almost never do it. The problem is that xargs allows you to do so many other things that if you don't use it frequently, it's terribly easy to forget all the parameters you need to do this properly.

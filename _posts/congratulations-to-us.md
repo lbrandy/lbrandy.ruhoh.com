@@ -15,14 +15,14 @@ Before we get to the good news, let me tell you a story. At some point just afte
 We pretty much forgot about it with the exception of the (very) occasional calls we've received on the topics of quilting and knitting. What was the point of this story? Read on.
 <h3>Hardwork Pays Off</h3>
 A few years on and we've bore so much fruit from our labor: face detection, face tracking, landmark localization, face recognition, speed-up factors in the 100s, highly threadable versions, and so on. Finally, with so much hard work, and dedication, it finally happened. On December 4th, a day sure to live on in our company's memory forever, we received the following email:
-<blockquote>I am pleased to announce that Pittsburgh Pattern Recognition has been selected for the 2008 Best of Pittsburgh Award in the Pattern Makers category by the U.S. Local Business Association (USLBA).
 
-In recognition of your achievement, a 2008 Best of Pittsburgh Award plaque has been designed for display at your place of business:</blockquote>
+> I am pleased to announce that Pittsburgh Pattern Recognition has been selected for the 2008 Best of Pittsburgh Award in the Pattern Makers category by the U.S. Local Business Association (USLBA).
+> 
+> In recognition of your achievement, a 2008 Best of Pittsburgh Award plaque has been designed for display at your place of business.
+
 Hot damn! We're #1!
 
 Given our new standing as the #1 pattern makers in the Pittsburgh area, I've decided to go ahead and drop some knowledge on you lesser mortals. Check it out.
-
-[caption id="attachment_342" align="alignnone" width="300" caption="a truly magestic pattern"]<a href="http://lbrandy.com/blog/wp-content/uploads/2008/12/pattern_out.png"><img class="size-medium wp-image-342" title="pattern_out" src="http://lbrandy.com/blog/wp-content/uploads/2008/12/pattern_out-300x93.png" alt="a truly magestic pattern" width="300" height="93" /></a>[/caption]
 
 Whoa damm.
 

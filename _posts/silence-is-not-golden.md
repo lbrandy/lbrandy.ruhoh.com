@@ -17,23 +17,24 @@ As I've said here from time to time, I do quite a bit of the HR stuff for our sm
 Silence is not a sign of just ignorance, it is almost always a sign of ignorance mixed with confusion or panic. If you ask someone a direct question "do you know what X is?", they may think for a minute, but they will usually say "no". Silence, however, usually means "I do not 100% know what they want me to say, and I need to think of the answer that is least wrong".
 
 Let's use one of their examples.
-<blockquote>How would you implement a read-write lock?</blockquote>
+> How would you implement a read-write lock?
 It doesn't surprise me such a question would result in silence. It's actually two questions.<em> Do you know what the term "read-write lock" means</em> and <em>how would you actually implement one</em>? For someone who was recently a student, or someone who hasn't done much concurrency recently, this sounds an awfully lot like an exam question.
 
 On the inside it's a bunch of panic...
 
-<em>What -is- a read-write lock? Is that what you are asking me? Am I supposed to know what a read-write lock is? What class was that in? The one with the philosopher's dinner table? Yea, probably. It's some kind of concurrency thing, probably. It's probably related to reading and writing? Uhm, that's not a very good hint... Are they really asking me for the definition? Am I going to get marked down for not knowing the definition? </em>
+Well, <em>what -is- a read-write lock? Is that what you are asking me? Am I supposed to know what a read-write lock is? What class was that in? The one with the philosopher's dinner table? Yea, probably. It's some kind of concurrency thing, probably. It's probably related to reading and writing? Uhm, that's not a very good hint... Are they really asking me for the definition? Am I going to get marked down for not knowing the definition? </em>
 
 On the outside, it's silence.
 <h3>Say no to silence, interviewer and interviewee alike</h3>
-<blockquote>You don’t actually have to code it over the phone. Mentioning starvation issues is bonus points. For heaven’s sakes, just give us something.
+> You don’t actually have to code it over the phone. Mentioning starvation issues is bonus points. For heaven’s sakes, just give us something.
+>
+> We try to ask about the difference between cooperative and preemptive multitasking. We try to ask about condition variables. 19 out of 20 times there is silence on the other end.
 
-We try to ask about the difference between cooperative and preemptive multitasking. We try to ask about condition variables. 19 out of 20 times there is silence on the other end.</blockquote>
 There's a good lesson for everyone here. Silence is pure poison in an interview. There should be all of five seconds of silence before you give up and answer their question with a question. If you are being interviewed, say something. "Let me make sure I understand what a read-write lock is, first. Is that when you can have many readers and no writers, or just one writer?" Even if you are wrong, you can at least get them to specify what they mean, and then you can try to answer the question that's been asked.
 
 Even saying "I don't know what a read-write lock is." is almost certainly better than pure silence. Yes, it's a negative statement, but if I tell you, and then you proceed to discuss it flawlessly, I'll chalk it up to your textbook using a different term (or you just forgetting the vocabulary). No harm, no foul.
 
-<strong>And then there is the flipside of this conversation</strong>: the cold, hard, reality that every interviewer faces from time to time. If an inordinate amount of interviewees are troublingly silent, it <i>might</i> be because your standard are really high. There is, however, another explanation.
+**And then there is the flipside of this conversation**: the cold, hard, reality that every interviewer faces from time to time. If an inordinate amount of interviewees are troublingly silent, it <i>might</i> be because your standard are really high. There is, however, another explanation.
 
 If you are the interviewer, you have to realize that silence breeds silence. It's usually easy to break down questions into parts that make it much less likely to be ambiguous and promote that silent, confused, panicked state. First, ask them if they know what a read-write lock is. Then ask them what it is. And once you've both agreed on the definition, ask them how they'd implement one. This simple modification results in far more "yes" and "no", and far less confused silence.
 

@@ -23,11 +23,11 @@ Please don't take anything I say too seriously.
 
 <h3>Projects (including half-finished old stuff)</h3>
 
-<a href="http://replayspider.com">replayspider</a> -- a starcraft 2 replay aggregation site
+* A starcraft 2 replay aggregation site: <a href="http://replayspider.com">replayspider</a>
 
-<a href="https://github.com/lbrandy/ffmpeg-fas">ffmpeg-fas</a> -- a library for frame-accurate seeking (by frame number) using ffmpeg. 
+* A library for frame-accurate seeking (by frame number) using ffmpeg. <a href="https://github.com/lbrandy/ffmpeg-fas">ffmpeg-fas</a>
 
-<a href="http://www.youtube.com/watch?v=DZ-gov94_po">an unnamed udk game</a> -- built with the unreal development kit. Watch the video. I'd love to come back to this but making games is a tremendous amount of work.
+* An <a href="http://www.youtube.com/watch?v=DZ-gov94_po">unnamed udk game</a> built with the unreal development kit. Watch the video. I'd love to come back to this but making games is a tremendous amount of work.
 
 <h3>etc</h3>
 

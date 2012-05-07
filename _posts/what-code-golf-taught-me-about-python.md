@@ -23,17 +23,23 @@ Most people (wrongly) believe that white space is the reason Python is a poor la
 	<li>exec can save the day (not useful for real programming!)</li>
 </ol>
 The second point will be covered by some of the techniques below so let's deal with the first.
-<pre>if a:                 # before
-  bob()
+
+<pre>
+if a:                 # before
+  bob()
   jim()
 
-if a: bob();jim()     # after</pre>
+if a: bob();jim()     # after
+</pre>
+
 Simple. Effective. One line if/while/for<em> </em>statements shouldn't be used in regular python very often but there are times when removing that white space can sometimes substantially clean up the code.
 <h3>Functional Programming</h3>
 Hopefully this is obvious but code golfers should be ready and willing to map() all kinds of things all over the place. Fall in love with map(). You generally won't use reduce() in golf because most often, after mapping, you'll tend to use either join() or sum() or something along those lines. Lambdas also get a fair bit of action in code golf. You'll become much more familiar with this section of the language.
 <h3>Conditional Moves</h3>
 Often times your if statements are nothing but glorified <a href="http://www.x86.org/secrets/opcodes/cmov.htm">conditional move instructions</a>. Those if statements can almost always be replaced by simpler statements:
-<pre>if a&lt;0:                        # beginner python
+
+<pre>
+if a&lt;0:                        # beginner python
   b=2*a
 else:
   b=3*a
@@ -41,8 +47,10 @@ else:
 b=2*a if a&lt;0 else 3*a          # proper python
 
 b=a&lt;0 and 2*a or 3*a           # codegolf1
-b=a*(3,2)[a&lt;0]                 # codegolf2</pre>
-Now, all of the above idioms have pros and cons as far both function and readability. Let's get the caveats out of the way. The first code golf technique above only works if your first expression doesn't evaluate to 0. The second code golf expression doesn't short circuit (so, for example, (0,a/b)[b!=0] does not prevent division by 0).
+b=a*(3,2)[a&lt;0]                 # codegolf2
+</pre>
+
+Now, all of the above idioms have pros and cons as far both function and readability. Let's get the caveats out of the way. The first code golf technique above only works if your first expression doesn't evaluate to 0. The second code golf expression doesn't short circuit (so, for example, <code>(0,a/b)[b!=0]</code> does not prevent division by 0).
 
 All three of these idioms (if/else, and/or, and the index into a tuple) are worth understanding and recognizing. They can all be very powerful in certain real world situations.
 <h3>Operators</h3>

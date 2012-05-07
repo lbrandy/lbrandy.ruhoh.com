@@ -14,36 +14,36 @@ There are many canonical examples of non-questions, but they occur even more fre
 
 Since these questions, by their nature, demonstrate a fundamental level of ignorance that cannot be easily cured (by either the asker, or the answerer) then we simply need to strive for 75% answers. If you know enough about a particular topic to know why a 75% answer isn't good enough for you, you probably know enough to ask better questions. If you know literally nothing, find one of the many 75% answers, and just go for it.
 <h3>The 75% answer to all newbie questions</h3>
-<strong>Operating System?</strong>
+**Operating System?**
 <ul>
 	<li>Linux: servers, work desktops</li>
 	<li>Macs: laptops, work or play</li>
 	<li>Windows: home machines (only if you play games)</li>
 </ul>
-<strong>Linux distro?</strong> Ubuntu.
+**Linux distro?** Ubuntu.
 
-<strong>Gnome or KDE? </strong>Gnome.
+**Gnome or KDE? **Gnome.
 
-<strong>Text editor?</strong> Emacs.
+**Text editor?** Emacs.
 
-<strong>Web framework?</strong> Ruby on Rails.
+**Web framework?** Ruby on Rails.
 
-<strong>Web server?</strong> Apache.
+**Web server?** Apache.
 
-<strong>Prototype or jQuery?</strong> jQuery.
+**Prototype or jQuery?** jQuery.
 
-<strong>What programming language should I learn?</strong> C.
+**What programming language should I learn?** C.
 
-<strong>I already know C</strong>. Python
+**I already know C**. Python
 
-<strong>Anything else?</strong> Lisp
+**Anything else?** Lisp
 
-<strong>What hourly rate should I charge?</strong> $75 per hour.
+**What hourly rate should I charge?** $75 per hour.
 
-<strong>Someone help me pick a good font!</strong> Georgia or Verdana. And never put black (#000) on white (#FFF)
+**Someone help me pick a good font!** Georgia or Verdana. And never put black (#000) on white (#FFF)
 
-<strong>Paper or plastic?</strong> Plastic! And don't give me any dirty looks either, hippy!
+**Paper or plastic?** Plastic! And don't give me any dirty looks either, hippy!
 
-<strong>Effect or affect?</strong> Use the following words, only: effect (noun), affect (verb), effective, affected, affecting (you'll be right more than 75%).
+**Effect or affect?** Use the following words, only: effect (noun), affect (verb), effective, affected, affecting (you'll be right more than 75%).
 
 If you are struggling with any of these questions, and have no overriding reason to disagree with my answer, go with it. Stop doing research, stop reading the internet, and stop asking non-questions in various forums. Find a 75% answer, and jump into it. I promise everything will work out. Even if you find it doesn't suit your needs, it'll teach you enough to figure out which alternative will. And 75% of the time, these will work out just fine.

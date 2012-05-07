@@ -30,7 +30,7 @@ So far so good, now I just needed to get all the parcel numbers for my area.
 <h3>Getting the parcel number list information</h3>
 I needed to find the parcel id for every single house in my town.
 
-Their search box wouldn't let me search for '*'. Searching for 'A' in the street address, however, gets you a paginated list of every house in that town on a street that began with the letter 'A'. These searches were all conducted with a POST to a single url. All I had to do was figure out to form these POSTs and how to turn the page. This is where I hit a speed bump.
+Their search box wouldn't let me search for '\*'. Searching for 'A' in the street address, however, gets you a paginated list of every house in that town on a street that began with the letter 'A'. These searches were all conducted with a POST to a single url. All I had to do was figure out to form these POSTs and how to turn the page. This is where I hit a speed bump.
 
 The "next page" button on the results page was a javascript call that formed a new POST. Their POSTs had some "features" (I believe from some windows web development tool -- __VIEWSTATE, __EVENTVALIDATION were the arguments in the POST) that made crawling it non-trivial. The POST required some magical numbers that were formed in javascript.
 
@@ -55,17 +55,19 @@ I spent most of the night before rehearsing my speech for court. I wasn't rehear
 I walked into the courtroom with about 100 pages of documentation in a nifty leather notebook. 31 comparables and 7 of those in detail. I had absolutely no idea what they would do. I imagine lawyers or real estate agents have access to databases like this, so they'd probably just assume I knew someone. There was the outside chance that no one had ever done anything like this before.
 
 In the room sat two lawyers (my opponents) and the guy in charge (I presume he was a judge). It wasn't in a court room but an office adjacent to the court room. This is basically what happened:
-<blockquote><strong>Judge:</strong> What's your name?<strong></strong>
 
-<strong>Me: </strong>Louis Brandy.
+<blockquote>**Judge:** What's your name?
+
+**Me: **Louis Brandy.
 
 <em>The judge and opponent lawyers shuffled a lot of papers around. The two lawyers looked at the their papers for awhile. </em>
 
-<strong>Judge, to lawyers: </strong>Alright, what are we doing?
+**Judge, to lawyers: **Alright, what are we doing?
 
-<strong>Lawyer:</strong> This appeal was been going on for 2 years, with the previous owners. They [me+my wife] are the new owners. They bought it for $15,000 less than the previous owners. That puts their house into agreement with our numbers. There's no need to change this assessment. We will withdraw the appeal.
+**Lawyer:** This appeal was been going on for 2 years, with the previous owners. They (me+my wife) are the new owners. They bought it for $15,000 less than the previous owners. That puts their house into agreement with our numbers. There's no need to change this assessment. We will withdraw the appeal.
 
-<strong>Judge, to me</strong>: You can go forward, if you want, and I'll decide what to do with the assessment -- up or down. They are willing to withdraw the appeal, is that ok with you?</blockquote>
+**Judge, to me**: You can go forward, if you want, and I'll decide what to do with the assessment -- up or down. They are willing to withdraw the appeal, is that ok with you?</blockquote>
+
 Ah, crap. I had a decision to make. Should I push forward and risk being embarrassed? What if I printed up the wrong numbers? What if my comparables were garbage? What if they had equal comparables to keep my price at the same level? Accepting the the draw was the obvious choice. My only hesitation was that it would ruin my story.
 
 I thought briefly but there wasn't really a choice. I said yes, their withdrawal was fine by me. I signed the papers and walked out of my hearing.

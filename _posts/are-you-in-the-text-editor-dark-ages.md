@@ -28,10 +28,10 @@ Emacs users, come with me.
 <h2>Setting up tags in Emacs</h2>
 This will require some reasonable knowledge of the unix/linux command-line, including editing your Emacs configuration file (you do have one of those, right?). You will also need etags installed (it often comes pre-installed, so you may already have it).
 
-<strong>Step 1.</strong> Let's get a codebase we can play with...
+**Step 1.** Let's get a codebase we can play with...
 <pre>svn checkout -r 18337 svn://svn.ffmpeg.org/ffmpeg/trunk ffmpeg
 cd ffmpeg</pre>
-<strong>Step 2.</strong> Now that we have a codebase, let's generate tags for it.
+**Step 2.** Now that we have a codebase, let's generate tags for it.
 <pre>mkdir ~/.tags/
 find . -name "*.[ch]" | xargs etags -o ~/.tags/TAGS</pre>
 Now, what I've done here is created a hidden directory called ".tags" in my home directory, and generated a TAGS file for my codebase in that. Obviously, this is a C codebase so a different language codebase would need an appropriate find command. If you have or want multiple different etags lines you need to use the -a option to append. For example:
@@ -39,7 +39,7 @@ Now, what I've done here is created a hidden directory called ".tags" in my home
 find . -name "*.c" | xargs etags -a -o ~/.tags/TAGS</pre>
 If you generate tags like this, you'll need to manually update them whenever you've added large sections of the code you want re-parsed. Using a single tags directory and having to manually update your TAGS file from time to time is less than ideal but fine for beginning usage. You can get more advanced as you get more comfortable.
 
-<strong>Step 2. Tell emacs where to find our TAGS file</strong>
+**Step 2. Tell emacs where to find our TAGS file**
 
 Now that we have a codebase, let's generate tags for it.The last step is to tell Emacs where we keep our TAGS files. This can be done by setting a variable (preferably in your custom loaded .el file) like so:
 <pre>     (setq tags-table-list

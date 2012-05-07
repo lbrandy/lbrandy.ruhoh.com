@@ -20,7 +20,7 @@ There, I said it. I think most people, especially those who've only learned abou
 	<li>You can almost always abstract away the synchronization primitives and unit-test them really well.</li>
 	<li>There are tons of good off-the-shelf and well-tested synchronization libraries for most platforms, and most languages.</li>
 	<li>The <a href="http://www.mysql.com/">truly difficult synchronization problems</a> have many, many smart people working on them, and these are things you should not be reinventing.</li>
-	<li><strong>And last but not least, and most importantly, no matter how difficult your synchronization issues are, I can assure you that bigger problems are lurking.</strong></li>
+	<li>**And last but not least, and most importantly, no matter how difficult your synchronization issues are, I can assure you that bigger problems are lurking.**</li>
 </ol>
 <h3>Why parallel programming is actually hard</h3>
 There is probably no one correct answer to this question, but most will probably involve words like: granularity, throughput, response-time, cache size, memory bottleneck, and so on.
@@ -29,15 +29,15 @@ Let's start with the core of the problem: <a href="http://en.wikipedia.org/wiki/
 
 I'll invoke a problem from my daily work that will help explain this nicely. A video file is nothing but a sequence of images. If you want to perform face detection on a video stream, you can parallelize in several ways. A coarse grain approach might be to give each worker its own image, and collect the results at the end. A finer grained approach might throw all of the threads at a single image hoping you can process that image n-times faster.
 
-<strong>Here are some general (yet frequently broken) rules of thumb:</strong>
+**Here are some general (yet frequently broken) rules of thumb:**
 
-1. <strong>Finer grained algorithms will thread less efficiently than coarse grained.</strong> Usually, it's because any natural parallelism in your problem tends to improve as you become more coarse grained (do 20 images in each thread, instead of one). Furthermore, coarse grained algorithms do less communication and synchronization per unit of work. This means coarse grain approaches will tend to have better throughput (work done per unit of time) and less administrative overhead. There is an important caveat here, if you are too coarse grained, or if your jobs vary in size too much, you run smack into <a href="http://en.wikipedia.org/wiki/List_of_NP-complete_problems#Sequencing_and_scheduling">scheduling problems</a> that will certainly leave some workers with nothing to do.
+1. **Finer grained algorithms will thread less efficiently than coarse grained.** Usually, it's because any natural parallelism in your problem tends to improve as you become more coarse grained (do 20 images in each thread, instead of one). Furthermore, coarse grained algorithms do less communication and synchronization per unit of work. This means coarse grain approaches will tend to have better throughput (work done per unit of time) and less administrative overhead. There is an important caveat here, if you are too coarse grained, or if your jobs vary in size too much, you run smack into <a href="http://en.wikipedia.org/wiki/List_of_NP-complete_problems#Sequencing_and_scheduling">scheduling problems</a> that will certainly leave some workers with nothing to do.
 
-2.<strong> Finer grained algorithms will have better response times.</strong> In this case, response time means from submission of a work unit, until the result is ready. Since a fine grained algorithm is more frequently synchronizing the state, you have more opportunities to prioritize things that need to get done, and then declare them done.
+2.** Finer grained algorithms will have better response times.** In this case, response time means from submission of a work unit, until the result is ready. Since a fine grained algorithm is more frequently synchronizing the state, you have more opportunities to prioritize things that need to get done, and then declare them done.
 
-3. <strong>Finer grained algorithms will tend to use less cache/memory.</strong> This is because, in general, less data being worked on.
+3. **Finer grained algorithms will tend to use less cache/memory.** This is because, in general, less data being worked on.
 
-4. <strong>Finer grained problems tend to be more painful to maintain</strong>. You will assume parallelism along some dimension that really needs to be serialized for some new feature.
+4. **Finer grained problems tend to be more painful to maintain**. You will assume parallelism along some dimension that really needs to be serialized for some new feature.
 
 Let's go back to my real-world example. Sometimes throughput is king, like when you are processing a movie file. In this scenario, sending a frame to each worker thread and collecting the results later is fairly easy to implement, and threads extremely well. Other times, response time is king. For example, when tracking a face with a pan-tilt-zoom camera. Sending each frame to a different worker is completely inappropriate for this use-case because this doesn't improve response time at all (each thread only has one worker, still). As soon as a frame is submitted, you need an answer as quickly as possible to have stable control. In this case, it is far better to throw all of the worker threads at a single frame (thread at the sub-frame level), and hope to improve the computation of a single frame.
 

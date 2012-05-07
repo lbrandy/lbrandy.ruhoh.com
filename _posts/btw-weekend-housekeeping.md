@@ -20,4 +20,4 @@ So I made some simple updates to the site...
 </ol>
 and the real reason I made this little oh by the way post:
 
-<strong>7. I've disabled trackbacks for my new posts.</strong> They are a great idea, in theory, but in practice... ugh... virtually none of the ones I've received have been useful. If you write a blog response to anything I've written, please post the link in a comment. I'd love to read and reply to anyone whose taken the time to respond to anything I've written.
+**7. I've disabled trackbacks for my new posts.** They are a great idea, in theory, but in practice... ugh... virtually none of the ones I've received have been useful. If you write a blog response to anything I've written, please post the link in a comment. I'd love to read and reply to anyone whose taken the time to respond to anything I've written.

@@ -14,14 +14,17 @@ Let's cut to the chase. The most important data point, ever:
 
 <a href="http://lbrandy.com/blog/wp-content/uploads/2009/02/fsm.png"><img class="alignnone size-medium wp-image-571" title="fsm" src="http://lbrandy.com/blog/wp-content/uploads/2009/02/fsm-300x229.png" alt="" width="300" height="229" /></a>
 
-<a href="http://en.wikipedia.org/wiki/Germ_theory_of_disease">Louis Pasteur boiled some liquid</a>, and inside nothing grew. The consequences of this incredibly simple act are tremendous. There are living things too small to see. They cause diseases. It is not caused by vengeful gods, witches, or spontaneous generation. There is no more need for witch hunts, human, or animal sacirifice to ward off disease. Some, at the time, understood the implications of the simple experiment, others had to be led there. Some of you realize what the above data point means, for the rest, carry on.
+First, <a href="http://en.wikipedia.org/wiki/Germ_theory_of_disease">Louis Pasteur boiled some liquid</a>, and inside nothing grew. The consequences of this incredibly simple act are tremendous. There are living things too small to see. They cause diseases. It is not caused by vengeful gods, witches, or spontaneous generation. There is no more need for witch hunts, human, or animal sacirifice to ward off disease. Some, at the time, understood the implications of the simple experiment, others had to be led there. Some of you realize what the above data point means, for the rest, carry on.
+
 <h3>Trend #1: A recent downturn in global temperature</h3>
-<blockquote>This year [2008] appears set to be the coolest globally this century.</blockquote>
+
+> This year (2008) appears set to be the coolest globally this century.
 <p style="text-align: right;"><a href="http://news.bbc.co.uk/2/hi/science/nature/7574603.stm">bbc</a></p>
 
-<blockquote>This year is set to be the coolest since 2000, according to a preliminary estimate of global average temperature that is due to be released next week by the Met Office. The global average for 2008 should come in close to 14.3C, which is 0.14C below the average temperature for 2001-07.</blockquote>
-<p style="text-align: right;"><a href="http://www.guardian.co.uk/environment/2008/dec/05/climate-change-weather">guardian.co.uk
-</a>
+> This year is set to be the coolest since 2000, according to a preliminary estimate of global average temperature that is due to be released next week by the Met Office. The global average for 2008 should come in close to 14.3C, which is 0.14C below the average temperature for 2001-07.
+
+<p style="text-align: right;"><a href="http://www.guardian.co.uk/environment/2008/dec/05/climate-change-weather">guardian.co.uk</a></p>
+
 <p style="text-align: right;"><a href="http://earthobservatory.nasa.gov/IOTD/view.php?id=36699"></a></p>
 
 <h3>Trend #2: A recent surge in maritime piracy</h3>
@@ -43,13 +46,9 @@ Let's cut to the chase. The most important data point, ever:
 <blockquote>I’m sure you now realize how important it is that your students are taught this alternate theory. It is absolutely imperative that they realize that observable evidence is at the discretion of a Flying Spaghetti Monster. Furthermore, it is disrespectful to teach our beliefs without wearing His chosen outfit, which of course is full pirate regalia. I cannot stress the importance of this enough, and unfortunately cannot describe in detail why this must be done as I fear this letter is already becoming too long. The concise explanation is that He becomes angry if we don’t.
 
 You may be interested to know that <strong>global warming</strong>, earthquakes, hurricanes,<strong> and other natural disasters are a direct effect of the shrinking numbers of Pirates since the 1800s</strong>. For your interest, I have included a graph of the approximate number of pirates versus the average global temperature over the last 200 years. As you can see, there is a statistically significant inverse relationship between pirates and global temperature.</blockquote>
-<p style="text-align: right;"><a href="http://www.venganza.org/about/open-letter/">Bobby Henderson, <em>Open Letter to Kansas School Board</em> (2005)
-</a>
-<p style="text-align: left;">And so it was predicted, in 2005, that global warming was a direct reaction to the number of pirates world wide. In 2008, just three years later, the number of pirates began dramatically increasing, and with it, temperatures plummeted. <a href="http://en.wikipedia.org/wiki/Tests_of_general_relativity#Deflection_of_light_by_the_Sun">And like a tiny deflection in a single star's light</a> overturned Newton and enshrined Einstein as the king of physics, so too does this little data point change everything. A testable prediction has been made, and experimentally verified. Now the question is whether we have the courage and the strength to admit to ourselves the full implications.</p>
+<p style="text-align: right;"><a href="http://www.venganza.org/about/open-letter/">Bobby Henderson, <em>Open Letter to Kansas School Board</em> (2005)</a></p>
 
-<blockquote>
-<p style="text-align: left;">Finding the occasional straw of truth awash in a great ocean of confusion and bamboozle requires intelligence, vigilance, dedication and courage.</p>
-</blockquote>
-<p style="text-align: right;"><em><strong>CAAAAARRRRRl Sagan
-</strong></em>
-<p style="text-align: left;"></p>
+And so it was predicted, in 2005, that global warming was a direct reaction to the number of pirates world wide. In 2008, just three years later, the number of pirates began dramatically increasing, and with it, temperatures plummeted. <a href="http://en.wikipedia.org/wiki/Tests_of_general_relativity#Deflection_of_light_by_the_Sun">And like a tiny deflection in a single star's light</a> overturned Newton and enshrined Einstein as the king of physics, so too does this little data point change everything. A testable prediction has been made, and experimentally verified. Now the question is whether we have the courage and the strength to admit to ourselves the full implications.
+
+> Finding the occasional straw of truth awash in a great ocean of confusion and bamboozle requires intelligence, vigilance, dedication and courage.
+<p style="text-align: right;"><em><strong>CAAAAARRRRRl Sagan</strong></em></p>

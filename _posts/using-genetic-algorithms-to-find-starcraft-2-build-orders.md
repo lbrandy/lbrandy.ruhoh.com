@@ -64,11 +64,11 @@ Second, as far as I know, this build was "discovered" by the program (or at leas
 
 The most interesting part of this build, however, is how counter-intuitive it is. <strong>It violates several well-known (and well-adhered-to) heuristics used by Starcraft players when creating builds. </strong>Some of this may be lost on you non-starcraft players, but I'll do my best to explain.
 
-<strong>Extractor trick. </strong>
+**Extractor trick.**
 
-<strong></strong>The extractor trick is using a drone to build an extractor (remember this removes the drone), then build a replacement drone, then cancel the extractor, giving you the original drone back -- this allows you to build one more worker than your supply would allow. The extractor trick, as used above, has been tested and seen to be economically inferior to a more standard play of buying an overlord on 9 supply. The extractor trick + very early spawning pool do some economic damage and induce a small larva delay, so they are almost never seen. In this case, however, the extractor trick + early pool end up speeding up the entire tech path (this is the primary reason why the 7RR produces roaches much sooner than the 5RR).
+The extractor trick is using a drone to build an extractor (remember this removes the drone), then build a replacement drone, then cancel the extractor, giving you the original drone back -- this allows you to build one more worker than your supply would allow. The extractor trick, as used above, has been tested and seen to be economically inferior to a more standard play of buying an overlord on 9 supply. The extractor trick + very early spawning pool do some economic damage and induce a small larva delay, so they are almost never seen. In this case, however, the extractor trick + early pool end up speeding up the entire tech path (this is the primary reason why the 7RR produces roaches much sooner than the 5RR).
 
-<strong>Double Overlord at 18/17.</strong>
+**Double Overlord at 18/17.**
 
 First, a quick discussion about supply. Each unit you create costs supply. So long as you have supply, you can make units. Most RTS games have a similar concept. Overlords, for the zerg, are the unit that provides this supply. So for zerg, you have to spend 100 minerals to unlock additional supply. In general, it  is considered "optimal" for you to have just enough supply to not be supply-blocked. It's generally considered wasteful to buy supply when you don't need it (since you could spend that money, instead, on units or workers now, and buy the supply later, when you need it).
 

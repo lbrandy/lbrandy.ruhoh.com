@@ -19,7 +19,7 @@ for (y=0;y&lt;height;y++)
      a[y*width+x] = b[y*width+x] + c[y*width+x]</pre>
 I made the unfortunate comment, at the time, that every programmer should know which is faster. It turns out that I spoke too soon and maybe was a bit shortsighted. I found <a href="http://stackoverflow.com/questions/997212/fastest-way-to-loop-through-a-2d-array">this post on stack overflow</a>. In it the questioner re-asks the question: which is faster, and why?
 
-Sadly, the answer he is given, and the answer he chose as the "best", is almost completely wrong [UPDATE: the "community" eventually overturned the accepted answer and chose a better one]. Since I was the cause of all this confusion, I figured I'd go ahead and give a detailed explanation of which is faster and why.
+Sadly, the answer he is given, and the answer he chose as the "best", is almost completely wrong (UPDATE: the "community" eventually overturned the accepted answer and chose a better one). Since I was the cause of all this confusion, I figured I'd go ahead and give a detailed explanation of which is faster and why.
 
 The 2d matrices are mapped in row-order, meaning you put each row into memory one after the other. (Contrasted with column order where each column is put into memory, one after the other.). It's really important you understand that fact before we proceed because the entire post hinges on that. If you were to store your matrices in column order, the entire logic of this post flips.
 <h3>Science</h3>
@@ -101,6 +101,7 @@ Now, let's remember that the horizontal version is between 15 and 30 times faste
 </tr>
 </tbody>
 </table>
+
 You do not need to be an assembly expert (or even a novice) to realize that <strong>these two inner loops are absolutely 100% identical.</strong> The only difference occurs outside the computational portion of the loop where the loop variables are incremented, and in which order.
 
 So while it is true that a perfectly optimized horizontal add will have less instructions than a vertical add, that is most certainly not the end of the story.
@@ -111,16 +112,18 @@ When you access a memory address, the computer loads it into cache, along with i
 
 (note: My example has a few contrived elements to minimize complexity. I used valloc() in my test program, and I made sure my width was a multiple of 64. The net effect of these assumptions is that the beginning of each row is always the beginning of a cache line, and each row is always a clean multiple of the cache line size.)
 <h4>A cache-eyed view of our algorithms</h4>
-<strong>Horizontal</strong>. You will load up the first element and you get the 15 following elements (the cache line) "for free". You then proceed to use those 15 in order, after the first. At this point, you request the next element (the 17th), and get the next cache line, which you then compute on, and so on. This fits quite nicely.
+**Horizontal**. You will load up the first element and you get the 15 following elements (the cache line) "for free". You then proceed to use those 15 in order, after the first. At this point, you request the next element (the 17th), and get the next cache line, which you then compute on, and so on. This fits quite nicely.
 
-<strong>Vertical.</strong> You will load up the first element, like before, and get the 15 elements to his right "for free". You promptly ignore those 15 elements, and proceed to jump down to the next row (say, 4096 elements away, if that is the width of the row). You will then load up the second element of the first column, including his cache line (the 15 elements to his right), compute only him, and proceed to the third element. And so on.
+**Vertical.** You will load up the first element, like before, and get the 15 elements to his right "for free". You promptly ignore those 15 elements, and proceed to jump down to the next row (say, 4096 elements away, if that is the width of the row). You will then load up the second element of the first column, including his cache line (the 15 elements to his right), compute only him, and proceed to the third element. And so on.
 
 In the horizontal case, you load up all 16 elements and use them. In the vertical case, you are loading up 16 elements to compute only one of them.  On average, each element is loaded ONCE in the horizontal case, and each element is loaded 16 times in the vertical case (computed once, ignored 15x). T<strong>his means you are doing 16x as many memory to cache loads in the vertical case.</strong>
 
 This hypothesis is immediately appealing because 16x is on the same order of magnitude of the timing differences we've seen.<strong> It also explains why compiler optimizations don't help the vertical.</strong> If we are entirely cache bound, removing unnecessary instructions isn't going to help.
 
 Can we test this more fully? Well. Yes. Let's <strong>use</strong> those extra guys we've loaded. Let's try this bit of code:
-<pre>void vert_add2(float *in1, float *in2, float *out)
+
+<pre>
+void vert_add2(float *in1, float *in2, float *out)
 {
   int i,j;
   for (j=0;j&lt;WIDTH/16;j++)
@@ -144,12 +147,18 @@ Can we test this more fully? Well. Yes. Let's <strong>use</strong> those extra g
         out[index+14]=in1[index+14]+in2[index+14];
         out[index+15]=in1[index+15]+in2[index+15];
       }
-}</pre>
+}
+</pre>
+
 In this case, I am still traveling "vertically", but by cache lines, not elements. I load up the first cache line of the first row, compute it. I then load up the first cache line of the second row, compute it. And so on. If this hypothesis is true, this should be much faster than the normal vertical addition.
-<pre>louis@noisy:~/simple-optimization-test$ ./fast
+
+<pre>
+louis@noisy:~/simple-optimization-test$ ./fast
 horiz: 0.581028
 vert1: 15.797579
-vert_add2: 1.531041</pre>
+vert_add2: 1.531041
+</pre>
+
 With this simple change, we've made the vertical code 10x faster. This is strong evidence that our code is cache, not CPU bound.
 <h3>Follow-up #1: Can the vertical code be as fast as the horizontal?</h3>
 Probably not. As the stack overflow patron rightly pointed out, in the end, vertical code will need a marginal amount of extra code. I suspect the effect of these extra instructions will turn out to be extremely trivial in reality.
@@ -159,7 +168,9 @@ The real reason it's difficult to ever make the vertical code as fast as the hor
 It would be fairly difficult to make the CPU prefetch cache lines optimally in the vertical case. Likewise, the CPU is almost certainly prefetching optimally in the horizontal case, without any help at all.
 <h3>Follow-up #2: Can't this horizontal code be made even faster?</h3>
 Many, many, many people (including people on stack overflow) will see my code:
-<pre>void horiz_add(float *in1, float *in2, float *out)
+
+<pre>
+void horiz_add(float *in1, float *in2, float *out)
 {
  int i,j;
   for (i=0;i&lt;HEIGHT;i++)
@@ -168,21 +179,31 @@ Many, many, many people (including people on stack overflow) will see my code:
         int index = i * WIDTH + j;
         out[index]=in1[index]+in2[index];
       }
-}</pre>
+}
+</pre>
+
 ... and feel the uncontrollable urge to "optimize" this...
-<pre>void fast(float *in1, float *in2, float*out)
+
+<pre>
+void fast(float *in1, float *in2, float*out)
 {
   int i;
   for (i=0;i&lt;HEIGHT*WIDTH;i++)
     out[i]=in1[i]+in2[i];
-}</pre>
+}
+</pre>
+
 This is obviously faster. Right? Certainly, without compiler optimizations, it will be. But is the compiler smart enough to do away with the unnecessary calculations and do what is "right"?
-<pre>louis@noisy:~/optomization$ ./slow
+
+<pre>
+louis@noisy:~/optomization$ ./slow
 horiz: 1.669533
 fast: 1.273352
 louis@noisy:~/optomization$ ./fast
 horiz: 0.530805
-fast: 0.531471</pre>
+fast: 0.531471
+</pre>
+
 Laugh. I ran this about 10 times and the "fast" version won sometimes and lost others. On average and unscientifically, I'd say it might be a little faster. At best, this is an extremely marginal improvement.
 
 In the grand scheme of things, this optimization is completely and totally unnecessary. It provides, at best, a barely measurable improvement. And if this bit of code turns out to be a bottleneck...

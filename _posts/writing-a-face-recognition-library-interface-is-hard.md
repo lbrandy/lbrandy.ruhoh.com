@@ -13,16 +13,18 @@ This is a post I've wanted to write for awhile. This wasn't the post I had hoped
 Over time I realized that each library has such unique problems that general advice is almost entirely worthless. It involves balancing so many factor and in some cases the answers are obvious (a jpeg library really only has a handful of functions) or prior-art exists (GUI toolkits) that will help you. Other times, you are on your own and it becomes quite a struggle. So instead of my general advice that will save all of mankind, let me explain some of our struggles, and I'll let you figure out the lessons learned for your situation.
 
 Oh, and as if the engineering challenges weren't enough, you needn't forget to add in these supplementary exercises that are among the most tedious in all of programming.
+
 <h3>Crushed Souls</h3>
-<strong>Documentation. </strong>It is not fun. We both know it. And yet, you absolutely must have it and if you've done it right, it'll be incredibly useful. The sad truth is that most people won't read it.
+**Documentation**. It is not fun. We both know it. And yet, you absolutely must have it and if you've done it right, it'll be incredibly useful. The sad truth is that most people won't read it.
 
-<strong>Example Programs</strong>. Virtually everyone who uses your library will skip straight by the docs and straight to the example programs. These cannot be bad. Try to make at least one short, simple, and hello-worldish. It should be easy to find.
+**Example Programs**. Virtually everyone who uses your library will skip straight by the docs and straight to the example programs. These cannot be bad. Try to make at least one short, simple, and hello-worldish. It should be easy to find.
 
-<strong>Error reporting.</strong> Figure out a way to handle errors in a useful manner and report that information back to the developer. This is probably the second most soul crushing endeavor in all of programming.
+**Error reporting.** Figure out a way to handle errors in a useful manner and report that information back to the developer. This is probably the second most soul crushing endeavor in all of programming.
 
-<strong>Meetings.</strong> Did someone mentioning soul crushing? The only way to hammer out a good API is to get a bunch of people in a room and look at interfaces, functionality, paradigms, and conventions, and decide what is good and bad. As a word of warning, these meetings will not be short.
+**Meetings.** Did someone mentioning soul crushing? The only way to hammer out a good API is to get a bunch of people in a room and look at interfaces, functionality, paradigms, and conventions, and decide what is good and bad. As a word of warning, these meetings will not be short.
 
-<strong>Iterate.</strong> You simply cannot get it right the first time. This shouldn't come as a surprise. Iterate early, and iterate often. Work out a prototype H file first and work from there. Get that into a room with other devs and walk through the use cases. That H file is your spec.
+**Iterate.** You simply cannot get it right the first time. This shouldn't come as a surprise. Iterate early, and iterate often. Work out a prototype H file first and work from there. Get that into a room with other devs and walk through the use cases. That H file is your spec.
+
 <h3>Usability vs Flexibility</h3>
 This is where it gets difficult. Our SDK typically has been geared towards ease of use, not power. This meant that certain sophisticated things we do with our internal codebase aren't possible to replicate using our SDK. For example, we have a live camera-fed demo that devoted some threads to video processing (face detection &amp; tracking) and real-time display, and some other threads for psuedo-background recognition that updates the onscreen results as they come in. The complicated mix of threads and asynchronous nature of the recognition made this a non-trivial program to write. While possible, our old SDK was fundamentally ill-equipped to replicate it.
 

@@ -18,8 +18,10 @@ Sites like <a href="http://digg.com">digg</a> and <a href="http://reddit.com">re
 
 The point though is that you and the social sites are on the same side. They provide you with what you want (distribution) and you provide them with what they want (content). You should never have to apologize for adding content to a social news site. That being said, there are some caveats...
 
-<strong> Blogspam</strong><br id="fqfd0" /> <br id="fqfd1" /> Blogspam is the name given to taking <strong>someone else's </strong>content (often a video), slapping into an empty or vapid blog post, putting ads all around it, and then submitting it. Submitting <strong>your own</strong> content, however, cannot be blog spam.  <a href="http://dmiessler.com/blog/digg-and-reddit-please-learn-the-difference-between-original-content-and-blogspam">The point has been made before (from </a><a href="http://dmiessler.com/blog/digg-and-reddit-please-learn-the-difference-between-original-content-and-blogspam">Daniel Miessler)</a><a href="http://dmiessler.com/blog/digg-and-reddit-please-learn-the-difference-between-original-content-and-blogspam">:
-</a>
+**Blogspam**
+
+Blogspam is the name given to taking <strong>someone else's </strong>content (often a video), slapping into an empty or vapid blog post, putting ads all around it, and then submitting it. Submitting <strong>your own</strong> content, however, cannot be blog spam.  <a href="http://dmiessler.com/blog/digg-and-reddit-please-learn-the-difference-between-original-content-and-blogspam">The point has been made before (from </a><a href="http://dmiessler.com/blog/digg-and-reddit-please-learn-the-difference-between-original-content-and-blogspam">Daniel Miessler)</a><a href="http://dmiessler.com/blog/digg-and-reddit-please-learn-the-difference-between-original-content-and-blogspam">:</a>
+
 <blockquote>Many are confused about what blogspamming actually is: it’s <em>not</em> posting a link to something on your own blog or website (if it’s decent and original, that’s called “contributing”). Blogspamming is actually very specific (I had the Digg staff spell it out for me) — here are the requirements:
 <ol>
 	<li>Find interesting content somewhere on the Internet</li>

@@ -8,7 +8,6 @@ tags: []
 layout: post
 
 ---
-<div style="float:left;margin-right:20px;"> <iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=lbrandycom-20&o=1&p=8&l=as1&m=amazon&f=ifr&md=10FE9736YVPPT7A0FBG2&asins=0199291152" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></div>
 
 My wife loves fiction. It's not my thing. I've tried, but I struggle to read fiction. There are some novels that I've heard are beloved by my fellow programmers (<a href="http://www.amazon.com/gp/product/0060512806?ie=UTF8&amp;tag=lbrandycom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0060512806">Cryptonomicon</a><img style="border: none !important; margin: 0px !important;" src="http://www.assoc-amazon.com/e/ir?t=lbrandycom-20&amp;l=as2&amp;o=1&amp;a=0060512806" border="0" alt="" width="1" height="1" /> for one), and I'd love to hear any other suggestions along this line.
 
