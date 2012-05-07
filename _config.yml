@@ -21,7 +21,7 @@ comments :
     colorscheme: light
 
 analytics :
-  provider : google
+  provider : true # change tracking id then enable here
   google : 
       tracking_id : 'UA-4513764-3'
   getclicky :
