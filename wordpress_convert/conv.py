@@ -58,6 +58,9 @@ def write_post(p):
 def write_page(p):
     write(p, basepath+"_pages/")
      
+def dirty_hack_filter(content):
+    return content.replace("\r","")
+
 draftcounter = 1  
 def write(p, dirname):
     if is_draft(p):
@@ -70,7 +73,7 @@ def write(p, dirname):
     
     f=open(dirname+filename, 'w')
     f.write(header(p))
-    f.write(p["post_content"])
+    f.write(dirty_hack_filter(p["post_content"]))
     print "Wrote", ("(DRAFT)"if is_draft(p) else "") + p["post_title"]
 
 import MySQLdb as db
